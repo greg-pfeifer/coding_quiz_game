@@ -11,9 +11,6 @@ var pageThree = document.getElementById('pageThree')
 var pageFour = document.getElementById('pageFour')
 var pageFive = document.getElementById('pageFive')
 
-var restart = document.querySelectorAll('div')
-
-
 function init () {
     var h2 = document.createElement('h2');
     h2.innerText = 'Coding Quiz Challenge';
@@ -36,7 +33,6 @@ function init () {
         firstPage()
     })
 }
-
 init()
 
 function startTimer() {
@@ -74,12 +70,6 @@ pageOne.addEventListener('click', function(obj){
         count = count - 10};
 })
 
-
-
-
-
-
-
 function secondPage() {
     var h2 = document.createElement('h2');
     h2.innerText = 'In relation to JavaScript, what does the acronym OOP stand for?'
@@ -104,12 +94,6 @@ pageTwo.addEventListener('click', function(obj){
         count = count - 10};
 })
 
-
-
-
-
-
-
 function thirdPage() {
     var h2 = document.createElement('h2');
     h2.innerText = 'What are the three parameters of a "for" loop?'
@@ -133,8 +117,6 @@ pageThree.addEventListener('click', function(obj){
     } else {alert ('Incorrect - 10 seconds subtracted from timer!');
         count = count - 10};
 })
-
-
 
 function fourthPage() {
     var h2 = document.createElement('h2');
@@ -162,8 +144,7 @@ pageFour.addEventListener('click', function(obj){
 
 function fifthPage() {
     var h2 = document.createElement('h2');
-    h2.innerText = 'Your score = ' + count
+    h2.innerText = 'Your score = ' + count + '/100'
     h2.classList.add('centered')
     pageFive.appendChild(h2);
-
 }
